@@ -20,11 +20,10 @@ public class TestMono {
 
 	private static final Logger logger = Logger.getLogger(TestMono.class.getName());
 
-//	private static String username = "s.k.rath370";
-//	private static String accessKey = "LT_PJu4i7Gnp48MYaod5g9OIfFHTNM7TkClECX2CZJWiOkYMwl";
+	private static String username = "s.k.rath370";
+	private static String accessKey = "LT_PJu4i7Gnp48MYaod5g9OIfFHTNM7TkClECX2CZJWiOkYMwl";
 	
-	private static String username = "pulusatapathy";
-	private static String accessKey = "LT_vnTtE7Kz2JdZxDMdHcYILw8YqMD67aJVEhWyE4GFf2cTdoL";
+	
 	private static String LAMBDA_TEST_URL = "https://hub.lambdatest.com/wd/hub";
 
 	private static String TEST_SITE_URL = "https://www.lambdatest.com/";
