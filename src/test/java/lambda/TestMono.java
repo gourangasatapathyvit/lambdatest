@@ -20,8 +20,11 @@ public class TestMono {
 
 	private static final Logger logger = Logger.getLogger(TestMono.class.getName());
 
-	private static String username = "s.k.rath370";
-	private static String accessKey = "LT_PJu4i7Gnp48MYaod5g9OIfFHTNM7TkClECX2CZJWiOkYMwl";
+//	private static String username = "s.k.rath370";
+//	private static String accessKey = "LT_PJu4i7Gnp48MYaod5g9OIfFHTNM7TkClECX2CZJWiOkYMwl";
+	
+	private static String username = "pulusatapathy";
+	private static String accessKey = "LT_vnTtE7Kz2JdZxDMdHcYILw8YqMD67aJVEhWyE4GFf2cTdoL";
 	private static String LAMBDA_TEST_URL = "https://hub.lambdatest.com/wd/hub";
 
 	private static String TEST_SITE_URL = "https://www.lambdatest.com/";
@@ -63,15 +66,18 @@ public class TestMono {
 			driver.findElement(By.xpath("//*[@id=\"__next\"]/div[1]/section[9]/div/p/a")).click();
 			WebElement scndCase = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"codeless_row\"]/div/div[4]/a")));
+			
+			
 			scndCase.click();
 			logger.info("2nd ok = " + driver.getTitle());
 
-			WebElement thirdCase = wait.until(ExpectedConditions
-					.elementToBeClickable(By.cssSelector("a.chat_btn[href='https://community.lambdatest.com/']")));
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", thirdCase);
-			Thread.sleep(500); // Brief pause for scroll animation
-			((JavascriptExecutor) driver).executeScript("arguments[0].click();", thirdCase);
 
+			//			WebElement thirdCase = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='social_button']//a")));
+			
+			WebElement thirdCase = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Ask the Community")));
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", thirdCase);
+			thirdCase.click();
+			
 			logger.info("3rd ok = " + driver.getTitle());
 
 			driver.quit();
